@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp-argo-application
+  namespace: argocd
+  labels:
+    name: myapp
+spec:
+  project: default
+
+  # Source of the application manifests
+  source:
+    repoURL: https://github.com/Harsha92/argocd-deploy.git
+    targetRevision: HEAD  
+    path: dev  
+    
+  # Destination cluster and namespace to deploy the application
+  destination:
+    # cluster API URL
+    server: https://kubernetes.default.svc
+    namespace: myapp
+          
+  # Sync policy
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true  
+
+    automated:
+      selfHeal: true
+      prune: true
+    
