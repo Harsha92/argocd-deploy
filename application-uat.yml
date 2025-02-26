@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/Harsha92/argocd-deploy.git
     targetRevision: HEAD  
-    path: uat  # New path for UAT
+    # path: uat  # New path for UAT
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp-uat  # Separate namespace for UAT
