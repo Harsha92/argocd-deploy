@@ -43,7 +43,7 @@ spec:
   source:
     repoURL: https://github.com/Harsha92/argocd-deploy.git
     targetRevision: HEAD  
-    path: uat  
+    path: dev  
     
   # Destination cluster and namespace to deploy the application
   destination:
