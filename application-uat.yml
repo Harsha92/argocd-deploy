@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argo-application-uat
+  name: myapp-uat-argo-application-uat
   namespace: argocd
   labels:
-    name: myapp
+    name: myapp-uat
 spec:
   project: default
   source:

@@ -1,12 +1,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: myapp-service
+  name: myapp-uat-service
   labels:
-    app: myapp
+    app: myapp-uat
 spec:
   selector:
-    app: myapp
+    app: myapp-uat
   ports:
     - name: http
       protocol: TCP
