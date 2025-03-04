@@ -1,10 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argo-application
+  name: todo-argo-application
   namespace: argocd
-  # labels:
-  #   name: myapp
 spec:
   project: default
 
@@ -12,13 +10,13 @@ spec:
   source:
     repoURL: https://github.com/Harsha92/argocd-deploy.git
     targetRevision: HEAD  
-    path: dev  
+    path: todo  
     
   # Destination cluster and namespace to deploy the application
   destination:
     # cluster API URL
     server: https://kubernetes.default.svc
-    namespace: myapp
+    namespace: todo
           
   # Sync policy
   syncPolicy:
